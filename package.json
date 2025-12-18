@@ -1,0 +1,12 @@
+{
+  "name": "ledger-importer",
+  "version": "0.0.1",
+  "description": "A small CLI utility for importing messy financial files into SQLite and generating auditable debit credit ledgers with reconciliation summaries.",
+  "type": "module",
+  "bin": {
+    "ledger-importer": "./src/cli.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0"
+  }
+}
