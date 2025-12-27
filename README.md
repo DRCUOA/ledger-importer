@@ -4,6 +4,12 @@ A small CLI utility for importing messy financial files into SQLite and generati
 
 ---
 
+## Docs
+
+- **`importCsv` — CSV importer explainer & commentary**: [`import_csv.js.md`](import_csv.js.md)
+
+---
+
 ## Introduction (problem / why)
 
 - Financial data arrives in inconsistent formats (`CSV`, `OFX`, spreadsheets, exports, PDFs converted to `CSV`).
@@ -81,7 +87,7 @@ Key principle:
 
 This is one of the most important engineering concepts in this tool.
 
-**Definition (plain English)**: Running the same operation twice produces the same result as running it once.
+**Definition**: Running the same operation twice produces the same result as running it once.
 
 Why this matters here:
 
@@ -149,11 +155,9 @@ This means:
 - Log context.
 - Preserve original data for audit.
 
-This is not pessimism. It is professional respect for reality.
-
 ### 7. SQLite as a boundary, not just storage
 
-`SQLite` here is not “a lightweight DB”. It is:
+`SQLite` here is:
 
 - A consistency engine.
 - A constraint enforcer.
@@ -179,20 +183,6 @@ A test in this project answers:
 
 One failing-then-passing test is enough for credibility.
 
-### 9. What you do not need (important)
+### The unifying mental model
 
-You do not need:
-
-- Statistics.
-- Machine learning.
-- Forecasting.
-- Optimisation.
-- Visualisation theory.
-- Big data concepts.
-
-If you find yourself reading about those, you are avoiding finishing.
-
-### The unifying mental model (keep this)
-
-This tool turns untrusted files into trusted records by enforcing constraints, preserving raw evidence, and making imbalance visible.
-
+This tool turns untrusted files into trusted records by enforcing constraints, preserving raw evidence, and making imbalance visible
